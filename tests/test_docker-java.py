@@ -28,10 +28,10 @@ class TestEditors(unittest.TestCase):
         response = client.containers.run("java", command="which nano", remove=True, name="javacontainer").decode("utf-8")
         self.assertEqual(response, "/usr/bin/nano\n", "Nano missing!")
 
-    # def test_emacs(self):
-    #     print("[INFO] Checking emacs installation")
-    #     response = client.containers.run("java", command="which emacs", remove=True, name="javacontainer").decode("utf-8")
-    #     self.assertEqual(response, "/usr/bin/emacs\n", "Nano missing!")
+    def test_emacs(self):
+        print("[INFO] Checking emacs installation")
+        response = client.containers.run("java", command="which emacs", remove=True, name="javacontainer").decode("utf-8")
+        self.assertEqual(response, "/usr/bin/emacs\n", "Nano missing!")
 
 # Add tests for sample code
 
