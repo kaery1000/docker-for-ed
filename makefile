@@ -68,10 +68,10 @@ push-pl:
 ## Java Image
 
 build-java:
-	docker build -t java docker_images/java/ --cache-from $(DOCKER_USER)/java
+	docker build -t java docker_images/java/ 
 
 build-docker-java:
-	docker build -t $(DOCKER_USER)/java docker_images/java/ --cache-from $(DOCKER_USER)/java
+	docker build -t $(DOCKER_USER)/java docker_images/java/ 
 
 run-interactive-java:
 	docker run --rm -it --name javacontainer $(DOCKER_USER)/java bash
